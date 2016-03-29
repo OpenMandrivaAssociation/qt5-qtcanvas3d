@@ -28,6 +28,7 @@ BuildRequires:	qmake5 = %{version}
 BuildRequires:	pkgconfig(Qt5Gui) = %{version}
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Qml)
+BuildRequires:	qt5-qtqml-private-devel
 
 %description
 Qt5 Canvas3D component
