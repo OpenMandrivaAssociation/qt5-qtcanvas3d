@@ -2,12 +2,12 @@
 
 %define api %(echo %{version} |cut -d. -f1)
 %define major %api
-%define beta %nil
+%define beta beta4
 
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Summary:	Qt5 - Canvas3d component
-Version:	5.6.0
+Version:	5.9.0
 Name:		qt5-qtcanvas3d
 %if "%{beta}" != ""
 Release:	0.%{beta}.1
