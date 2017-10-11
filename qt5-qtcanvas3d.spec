@@ -2,16 +2,16 @@
 
 %define api %(echo %{version} |cut -d. -f1)
 %define major %api
-%define beta %{nil}
+%define beta beta
 
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Summary:	Qt5 - Canvas3d component
-Version:	5.9.2
+Version:	5.10.0
 Name:		qt5-qtcanvas3d
 %if "%{beta}" != ""
 Release:	0.%{beta}.1
-%define qttarballdir qtcanvas3d-opensource-src-%{version}-%{beta}
+%define qttarballdir qtcanvas3d-everywhere-src-%{version}-%{beta}
 Source0:	http://download.qt.io/development_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}-%{beta}/submodules/%{qttarballdir}.tar.xz
 %else
 Release:	1
