@@ -2,7 +2,7 @@
 
 %define api %(echo %{version} |cut -d. -f1)
 %define major %api
-%define beta rc1
+%define beta rc2
 
 %define _qt5_prefix %{_libdir}/qt%{api}
 
