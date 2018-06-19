@@ -7,7 +7,7 @@
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Summary:	Qt5 - Canvas3d component
-Version:	5.11.0
+Version:	5.11.1
 Name:		qt5-qtcanvas3d
 %if "%{beta}" != ""
 Release:	0.%{beta}.1
