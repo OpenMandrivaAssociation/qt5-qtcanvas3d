@@ -34,7 +34,7 @@ BuildRequires:	qt5-qtqml-private-devel
 BuildRequires:	cmake >= 3.11.0-1
 
 %description
-Qt5 Canvas3D component
+Qt5 Canvas3D component.
 
 %package examples
 Summary: Programming examples for %{name}
@@ -43,14 +43,14 @@ Requires: %{name}  = %{version}-%{release}
 %{summary}.
 
 %prep
-%setup -q -n %qttarballdir
+%autosetup -n %qttarballdir -p1
 
 %build
 %qmake_qt5
-%make
+%make_build
 
 %install
-%makeinstall_std INSTALL_ROOT=%{buildroot}
+%make_install INSTALL_ROOT=%{buildroot}
 
 %files
 %{_qt5_prefix}/qml/QtCanvas3D/
