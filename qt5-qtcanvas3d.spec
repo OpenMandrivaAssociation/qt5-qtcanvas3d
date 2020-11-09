@@ -6,7 +6,7 @@
 
 %define _qt5_prefix %{_libdir}/qt%{api}
 
-Summary:	Qt5 - Canvas3d component
+Summary:	Qt5 - Canvas3d component (obsolete)
 Version:	5.12.3
 Name:		qt5-qtcanvas3d
 %if "%{beta}" != ""
@@ -14,7 +14,7 @@ Release:	0.%{beta}.1
 %define qttarballdir qtcanvas3d-everywhere-src-%{version}-%{beta}
 Source0:	http://download.qt.io/development_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}-%(echo %{beta} |sed -e "s,1$,,")/submodules/%{qttarballdir}.tar.xz
 %else
-Release:	1
+Release:	2
 %define qttarballdir qtcanvas3d-everywhere-src-%{version}
 Source0:	http://download.qt.io/official_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}/submodules/%{qttarballdir}.tar.xz
 %endif
@@ -24,8 +24,8 @@ License:	LGPLv2 with exceptions or GPLv3 with exceptions
 Url:		http://www.qt.io
 Group:		Development/KDE and Qt
 
-BuildRequires:	qmake5 = %{version}
-BuildRequires:	pkgconfig(Qt5Gui) = %{version}
+BuildRequires:	qmake5 >= %{version}
+BuildRequires:	pkgconfig(Qt5Gui) >= %{version}
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5OpenGL)
 BuildRequires:	pkgconfig(Qt5Qml)
@@ -36,11 +36,18 @@ BuildRequires:	cmake >= 3.11.0-1
 %description
 Qt5 Canvas3D component.
 
+This component has been abandoned upstream and is no longer
+maintained. It is provided for compatibility only.
+
 %package examples
 Summary: Programming examples for %{name}
 Requires: %{name}  = %{version}-%{release}
+
 %description examples
 %{summary}.
+
+This package has been abandoned upstream and is no longer
+maintained. It is provided for compatibility only.
 
 %prep
 %autosetup -n %qttarballdir -p1
