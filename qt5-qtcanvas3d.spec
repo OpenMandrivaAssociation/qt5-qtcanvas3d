@@ -21,7 +21,7 @@ Source0:	http://download.qt.io/official_releases/qt/%(echo %{version}|cut -d. -f
 Source1:	qt5-qtcanvas3d.rpmlintrc
 
 License:	LGPLv2 with exceptions or GPLv3 with exceptions
-Url:		http://www.qt.io
+Url:		https://www.qt.io
 Group:		Development/KDE and Qt
 
 BuildRequires:	qmake5 >= %{version}
